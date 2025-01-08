@@ -1,8 +1,7 @@
 // healthclaimsfrontend/next.config.js
 const withImages = require('next-images')
-const withSass = require('next-sass')
 
-module.exports = withImages(withSass({
+module.exports = withImages({
   async rewrites() {
     return [
       {
@@ -11,4 +10,6 @@ module.exports = withImages(withSass({
       }
     ];
   }
-}))
+})
+
+
