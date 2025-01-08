@@ -1,4 +1,11 @@
-const withCSS = require('@zeit/next-css');
-module.exports = withCSS({
-  cssModules: true
-});
+module.exports = {
+    async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'http://healthclaimsbackend.railway.internal/api/:path*'
+        }
+      ];
+    }
+  };
+  

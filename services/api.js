@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://healthclaimsbackend.railway.internal/api', 
+  baseURL: 'http://healthclaimsbackend.railway.internal/api',
   headers: {
     'Content-Type': 'application/json'
   }
