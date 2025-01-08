@@ -1,8 +1,7 @@
-// services/api.js
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5070',
+  baseURL: '/api', // Esto debería redirigir a la URL configurada en `next.config.js`
   headers: {
     'Content-Type': 'application/json'
   }
@@ -10,7 +9,7 @@ const api = axios.create({
 
 export const verifyClaims = async (claims) => {
   try {
-    const response = await api.post('/api/verify-claims', { claims });
+    const response = await api.post('/verify-claims', { claims });
     return response.data;
   } catch (error) {
     console.error('Error al verificar claims:', error);
@@ -19,3 +18,4 @@ export const verifyClaims = async (claims) => {
 };
 
 export default api;
+
