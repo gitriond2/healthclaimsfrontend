@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api', // Esto debería redirigir a la URL configurada en `next.config.js`
+  baseURL: 'http://healthclaimsbackend.railway.internal/api', 
   headers: {
     'Content-Type': 'application/json'
   }
@@ -18,4 +18,3 @@ export const verifyClaims = async (claims) => {
 };
 
 export default api;
-
